@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+ <title>Adwit project</title>
+</head>
+<body>
+ <header>
+  <div class="top-header"><p>Workstation | CSR | AdwitAds</p></div>
+  <nav class="navbar">
+   
+   <ul>
+<li class="logo"><a href="#"><img src="./assets/advitLogo.PNG" alt=""></a></li>
+   <li><a href="#">Dashboard</a></li>
+   <li><a href="#">Workstation</a></li>
+   <li><a href="#">Reports</a></li>
+   <li><a href="#"><img src="./assets/email.png" alt="" style="width: 16px; margin-top: 5px;"></a></li>
+   <li><a href="#"><img src="./assets/speech-bubble.png" alt="" style="width: 16px; margin-top: 5px"></a></li>
+   <li><a href="#"><img src="./assets/user (1).png" alt="" style="width: 16px;  margin-top: 5px"></a></li>
+
+  </ul></nav>
+   </header>
+   
+    <section class="main">
+ <button class="dropdown-btn">My Queue  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &#9660; </button>
+
+     <div class="table-nav">
+      <table>
+        <tr>
+          <td class="active"><a href="" style="color: white;">All (6)</a></td>
+          <td><a href="">Revisions(2)</a></td>
+          <td><a href="">New Ads(2)</a></td>
+          <td><a href="">QA(3)</a></td>
+          <td><a href="">Design Check(1)</a></td>
+          <td><a href="">Proof Sent(1)</a></td>
+          
+        </tr>
+       
+      </table>
+      <input type="text" class="searchbar" id="customSearch"  name="customSearch">
+       
+    </div>
+     
+   <div class="main-table">
+ 
+  <table id="dataTable">
+    <thead style="background-color: rgba(12, 12, 12, 0.1);">
+      <tr>
+        <th>Order Date</th>
+        <th>Order Type</th>
+        <th>AdwitAds ID</th>
+        <th>Unique Job Number</th>
+        <th>Advertiser Name</th>
+        <th>Ad Rep Name</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>22nd Feb 2022</td>
+        <td>Print</td>
+        <td>2222 2222</td>
+        <td>Koch and Sons</td>
+        <td>Janice Monahan</td>
+        <td>Janice Monahan</td>
+        <td>In Production</td>
+        <td>1</td>
+        <td><button class="take-over-btn">Take Over</button></td>
+      </tr>
+      <tr>
+        <td>23rd Feb 2022</td>
+        <td>Online</td>
+        <td>3333 3333</td>
+        <td>Steuber LLC</td>
+        <td>Rollin Fadel</td>
+        <td>Rollin Fadel</td>
+        <td>Order Accepted</td>
+        <td>4</td>
+        <td><button class="start-design-btn" id="startDesignBtn1">Start Design</button></td>
+        <!-- POPUP1 ***************************** -->
+      <div id="dialog1" class="startDesignNewAd-popup" title="Start Design - New Ad">
+
+  <p style="text-decoration: underline; font-weight: bold;" class="heading"><strong> Order Information </strong></p> 
+  <div class="content-wrapper">
+  <div class="left-info">
+    <p>Publication Name:</p>
+    <p>Advisor Name:</p>
+    <p>Type of Ad: Print/Web</p> 
+  </div>
+  <div class="right-info">
+    <p>Category:</p>
+    <p>CSR Instruction:</p>
+    <p>Rush/Standard:</p>
+  </div>
+  </div>
+</div>
+      </tr>
+
+
+      <tr>
+        <td>24th Feb 2022</td>
+        <td>Page</td>
+        <td>4444 4444</td>
+        <td>Konopelski Group</td>
+        <td>Lera Stroman</td>
+        <td>Lera Stroman</td>
+        <td>Revision Submitted</td>
+        <td>5</td>
+        <td><button class="start-design-btn" id="startDesignBtn2">Start Design</button></td>
+        <!-- POPUP2 ***************************** -->
+      <div id="dialog2" class="startDesignNewAd-popup" title="Start Design - Revision">
+
+  <p style="font-weight: bold;" class="heading"><strong> Notes & Instructions </strong></p> 
+  <div class="content-wrapper">
+   
+  <div class="">
+  <textarea name="" id="" cols="70" rows="4" style="border: 1px dotted; outline: none;"></textarea>
+  <P>Download / View Files</P> 
+  <div style="margin-top: 10px; margin-bottom: 20px;">
+  <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Marked Up PDF</p></button>
+  <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Assets</p></button> 
+  </div>
+  <p>Download / View Previous Files</p> 
+  <div class="popup2-btn1">
+   <p><strong>pversion 2</strong></p>
+   <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Assets</p></button>
+   <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Native Files</p></button>
+  </div>
+  <div class="popup2-btn1">
+   <p><strong>pversion 1</strong></p> 
+   <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Assets</p></button>
+   <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Native Files</p></button>
+   <button style="background-color: white; padding: 3px 10px; border: 0.5px solid rgb(61, 59, 59, 0.5); border-radius: 5px;"><p>Proof</p></button>
+  </div>
+
+  </div>
+  
+  </div>
+</div>
+      </tr>
+      <tr>
+        <td>25th Feb 2022</td>
+        <td>Page</td>
+        <td>5555 5555</td>
+        <td>Harber Inc</td>
+        <td>Adan Schiller</td>
+        <td>Adan Schiller</td>
+        <td>Proof Sent</td>
+        <td>6</td>
+        <!-- POPUP3 ***************************** -->
+        <td><span id="eyebtn" style="cursor: pointer;"><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span id="pdf-btn" style="cursor: pointer;"><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+        
+<div id="dialog3" class="startDesignNewAd-popup" title="View Order - (AdwitAds ID) - (Unique Job ID)"> 
+
+ 
+  <div class="content-wrapper2">
+ <div class="info-box" id="box1">
+    <h5 class="inner-style">Order Details</h5>
+    <p>Order Date:</p>
+    <p>Publish Date:</p>
+    <p>Type of Ad: Print/Web</p>
+    <p>Color of Ad:</p>
+    <p>Size of Ad:</p>
+  </div>
+  <div class="info-box" id="box2">
+    <h5 class="inner-style">Advertiser Details</h5>
+    <p>Contact Person:</p>
+    <p>Email:</p>
+    <p>Phone:</p>
+  </div>
+  <div class="info-box" id="box3">
+    <h5 class="inner-style">Time Log</h5>
+    <p>Order Submitted:</p>
+    <p>Files Submitted:</p>
+    <p>Proof (v1) sent:</p>
+    <p>Proof (v1a) sent:</p>
+    <p>Proof (v1b) sent:</p>
+  </div>
+  <div class="info-box" id="box4">
+    <h5 class="inner-style">Files</h5>
+    <p><strong>Proof 1:v1</strong></p>
+    <p>Files Submitted:</p>
+    <p>Ad Proof</p> <hr style="background-color: #eee; border: 0 none; color: #eee; height: 1px;">
+    <p><strong>Proof 2:v1a</strong></p>
+    <p>Files Submitted:</p>
+    <p>Ad Proof:</p>:</p>
+  </div>
+  </div>
+  </div>
+  <div id="dialog4" class="startDesignNewAd-popup" title="View Order - (AdwitAds ID) - (Unique Job ID)"> 
+
+<div class="content-wrapper2">
+ <div>
+  <img src="./assets/image.png" alt="">
+ </div>
+  </div>
+  </div>
+
+      </tr>
+      <tr>
+        <td>25th Feb 2022</td>
+        <td>Online</td>
+        <td>6666 6666</td>
+        <td>Apple Inc</td>
+        <td>Joe Root</td>
+        <td>Joe Root</td>
+        <td>Design Check</td>
+        <td>3</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+      <tr>
+        <td>26th Feb 2022</td>
+        <td>Online</td>
+        <td>6666 6666</td>
+        <td>Apple Inc</td>
+        <td>Joe Root</td>
+        <td>Joe Root</td>
+        <td>In QA</td>
+        <td>2</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+      <tr>
+        <td>26th Feb 2022</td>
+        <td>Online</td>
+        <td>6666 6666</td>
+        <td>Apple Inc</td>
+        <td>Joe Root</td>
+        <td>Joe Root</td>
+        <td>In QA</td>
+        <td>2</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+     <tr>
+        <td>22nd Feb 2022</td>
+        <td>Print</td>
+        <td>2222 2222</td>
+        <td>Koch and Sons</td>
+        <td>Janice Manmohan</td>
+        <td>Janice Manmohan</td>
+        <td>In Production</td>
+        <td>1</td>
+        <td><button class="take-over-btn">Take Over</button></td>
+      </tr>
+      <tr>
+        <td>22nd Feb 2022</td>
+        <td>Print</td>
+        <td>2222 2222</td>
+        <td>Koch and Sons</td>
+        <td>Janice Manmohan</td>
+        <td>Janice Manmohan</td>
+        <td>In Production</td>
+        <td>1</td>
+        <td><button class="take-over-btn">Take Over</button></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+       <tr>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td>Dummy Data</td>
+        <td><span><img src="./assets/eye.png" alt="" style="width: 20px;"></span> &nbsp; <span><img src="./assets/pdf.png" alt="" style="width: 20px;"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </section>
+  <footer>
+
+   <ul>
+    
+    <li><a href="#">FAQ's</a></li> 
+    <li><a href="#">Contact Us</a></li> 
+    
+   </ul>
+   
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
